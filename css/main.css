@@ -45,7 +45,7 @@ hr {
   display: block;
   height: 1px;
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid black;
   margin: 1em 0;
   padding: 0;
 }
@@ -112,25 +112,23 @@ footer {
 /* ----- Header Styles ------------*/
 header {
    height: 275px;
+   padding: 15px;
 }
 header .content-wrappper {
    display:flex;
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
+   margin: 0;
 }
 
 header a img {
   width: 60%;
 }
 
-.header-divider {
+header .header-divider {
   width: 100%;
   /* make this a horizontal line*/
-}
-
-.header-divider {
-
 }
 
 header nav {
@@ -143,24 +141,29 @@ header nav {
 }
 
 header nav ul {
-  display:flex;
+   display:flex;
   justify-content: space-around;
-  width: 45%;
+  width: 150px;
 }
 
 footer .social-icons {
-  display:flex;
-  justify-content: space-around;
-  align-items: center;
+   display:flex;
+   justify-content: space-around;
+   align-items: center;
   }
 
 footer .social-icons p {
-  display:flex;
-  justify-content: center;
-  align-items: center;
+   display:flex;
+   justify-content: center;
+   align-items: center;
   }
 
 /* ----------------Mobile Styles - Homepage ------------*/
+/*----header area ----**/ 
+
+header a img {
+   width: 160px;
+}
 
 /*  ---Hero area ---*/
 
@@ -169,6 +172,11 @@ footer .social-icons p {
    justify-content: center;
    flex-flow: row wrap;
    height: 500px;
+   width: 90%;
+}
+.hero-area h1 {
+   padding: 50px 20px;
+  /*may have to enter some margin here*/
 }
 
 /*  ---Aside ---*/
@@ -179,17 +187,20 @@ aside {
    align-items: center;
    flex-flow: row wrap;
    height: 325px;
+   margin: 20px;
+}
+aside h3 {
+   padding: 10px 0px 10px 0px;
+  /*may need to different padding for the h3's in this div*/
+}
+aside .form-description p {
+   padding: ;
+}
+.form input {
+   width: 100%;
+   display: block;
 }
 
-section .content-wrapper {
-
-}
-
-
-footer .content-wrapper {
-  width: 100%
-  height: 325px;
-}
 
 /*  ---- features ----*/
 
@@ -198,13 +209,29 @@ footer .content-wrapper {
   justify-content: center;
   flex-flow: row wrap;
   height: 1450px;
+  padding: 20px;
 }
 
-.features .features-items {
+.features h2 {
+  padding: 10px 0px;
+}
+.features-items {
    display:flex;
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
+   /* this and .features article may be repeat*/
+}
+.features article {
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   flex-flow: row wrap;
+   width: 175px;
+   padding: 25px 0px;
+}
+.features p {
+  margin: 0;
 }
 
 /* ----reviews  ----*/
@@ -214,10 +241,39 @@ footer .content-wrapper {
    justify-content: center;
    flex-flow: row wrap;
    height: 600px;
+   padding: 20px;
 }
 
+.reviews h2 {
+  width: 300px;
+  padding: 15px 0px;
+}
+.reviews h3 {
+  width: 175px;
+  padding: 20px 0px;
+}
+.reviews p {
+  padding-bottom: 25px;
+}
+
+/* ----footer  ----*/
+
 footer .content-wrapper {
-   width: 55%;
+  width: 55%;
+  width: 100%
+  height: 325px;
+  padding: 20px 20px 0px 20px;
+}
+
+footer .contact, footer .social {
+  padding: 25px;
+}
+footer p {
+  margin: 0;
+}
+/*** h4 will need to be centered***/ 
+footer .copyright {
+  padding: 25px 0px 0px 0px;
 }
 
 /* =====================================================
