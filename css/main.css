@@ -10,7 +10,6 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
   color: #222;
   font-size: 1em;
@@ -89,16 +88,17 @@ textarea {
 
 /* ----------------------Base Header - Footer Styles ------------*/
 
-html body {
+/*html body {
   margin: 0px;
-}
+  not shown on solution
+}*/
 
 .content-wrapper {
   width: 90%;
-  max-width: ;
-  /*not sure if max-width needs to be here*/
-  margin: auto;
+  margin: 50px 0;
 }
+
+/*-------------base header and footer styles -----*/
 
 header, 
 footer {
@@ -106,14 +106,15 @@ footer {
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
-   width: 100%;
+   /*width: 100%;not needed*/
 }
 
-/* ----- Header Styles ------------*/
+/* -----base  Header Styles ------------*/
 header {
-   height: 120px;
-   padding: 15px;
+   /*height: 120px;not shown in solution*/
+   padding: 15px 0;
 }
+
 header .content-wrappper {
    display:flex;
    justify-content: center;
@@ -127,16 +128,17 @@ header a img {
   padding: ;
 }
 
-header .header-divider {
+.header-divider {
   width: 100%;
   height: 2px;
   background-color: black;
-/* color should be #e2e3ed*/ 
+/* color should be #e2e3ed*/
+  margin: 10px 0 20px 0; 
 }
 
 header nav {
    display:flex;
-   justify-content: center;
+   justify-content: space-around;
    align-items: center;
    flex-flow: row wrap;  
    width: 60%;
@@ -146,16 +148,33 @@ header nav {
 header nav ul {
   display:flex;
   justify-content: space-around;
-  width: 150px;
-
+  width: 100%;
   padding:;
 }
+
 header nav ul li {
   list-style: none;
 }
 
 header nav ul li a {
   text-decoration: none;
+}
+
+/* -----base  footer Styles ------------*/
+footer {
+  flex-direction: column;
+}
+
+footer .content-wrapper {
+   width: 55%;
+   margin: 50px 0;
+}
+
+/*footer .contact {
+  margin-bottom: 50px;have a dif padding below
+}*/
+footer .contact, footer .social {
+  padding: 25px;
 }
 
 footer .social-icons {
@@ -165,26 +184,27 @@ footer .social-icons {
   }
 
 footer .social-icons p {
+   margin: 0;
    display:flex;
    justify-content: center;
    align-items: center;
   }
 
+footer .copyright {
+  margin: 20px 0;
+}  
+
 /* ----------------Mobile Styles - Homepage ------------*/
-/*----header area ----**/ 
 
-header a img {
-   width: 160px;
-}
 
-/*  ---Hero area ---*/
+/*  -----Hero area ------*/
 
 .hero-area {
    display:flex;
    justify-content: center;
    flex-flow: row wrap;
-   height: 500px;
-   width: 90%;
+   width: 90%; 
+   /*the width is not shown in solution*/
 }
 .hero-area h1 {
    padding: 50px 20px;
@@ -198,13 +218,13 @@ aside {
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
-   height: 325px;
    margin: 20px;
+   /* margin not shown in solutions*/
 }
 aside h3 {
-   padding: 10px 0px 10px 0px;
-  /*may need to different padding for the h3's in this div*/
+   padding: ;
 }
+
 aside .form-description p {
    padding: ;
 }
@@ -220,28 +240,26 @@ aside .form-description p {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  height: 1450px;
   padding: 20px;
 }
 
 .features h2 {
   padding: 10px 0px;
+  /* solution code just has margin-bottom: 60px; */
 }
-.features-items {
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   flex-flow: row wrap;
-   /* this and .features article may be repeat*/
-}
+
 .features article {
+   width: 63%;
+   padding: 25px 0;
+}
+
+.features .features-items {
    display:flex;
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
-   width: 175px;
-   padding: 25px 0px;
 }
+
 .features p {
   margin: 0;
 }
@@ -252,40 +270,24 @@ aside .form-description p {
    display:flex;
    justify-content: center;
    flex-flow: row wrap;
-   height: 600px;
    padding: 20px;
+   /* padding not shown in solution*/
 }
 
 .reviews h2 {
   width: 80%;
   padding: 15px 0px;
+  /* margin: 20px 0; shown in solution*/
 }
+
 .reviews h3 {
-  width: 50%;
+  width: 55%;
   padding: 20px 0px;
 }
 .reviews p {
   padding-bottom: 25px;
-}
+   /* reviews p not shown in solution*/
 
-/* ----footer  ----*/
-
-footer .content-wrapper {
-  width: 55%;
-  width: 100%
-  height: 325px;
-  padding: 20px 20px 0px 20px;
-}
-
-footer .contact, footer .social {
-  padding: 25px;
-}
-footer p {
-  margin: 0;
-}
-/*** h4 will need to be centered***/ 
-footer .copyright {
-  padding: 25px 0px 0px 0px;
 }
 
 /* =====================================================
@@ -308,6 +310,11 @@ footer .copyright {
 .map {
   width: 100%;
 }
+
+.contact-content p {
+  margin: 0;
+}
+
  /* =====================================================
  FAQ page
  =====================================================*/
@@ -320,10 +327,19 @@ footer .copyright {
 }
 
 .faq .content-wrapper {
+   margin: 50px 0 0 0;  
    display:flex;
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
+}
+
+.faq h2 {
+  margin-bottom: 40px;
+}
+
+.faq-content {
+  margin-bottom: 50px;
 }
 
 
@@ -417,152 +433,186 @@ footer .copyright {
 
 @media only screen and (min-width: 768px) {
   /* Tablet style  here */
-  /********for header and footer*****/
+
+  /*--- Genereal Stylers ----*/
+  .content-wrapper {
+    max-width: 640px;
+    margin: 100px 0;
+  }
+
+  /********for header *****/
   
   header {
-    width: 100%;
-     margin: 0;
-     height: 100px;
-     justify-content: ;
-     /* don't know what justify-content does 
-     here, gets center from the header, footer above/*/
+    justify-content: space-around;
+    padding: 3px 0; 
   }
   
   header .content-wrapper {
-    justify-content: ;
-    /*don't know what this does, also this has a default margin*/
+    width: 100%;
+    justify-content: space-between;
+    /*don't know what this as header and 
+    header .content-wrapper seem to be the same container to me.*/
   }
   
   header nav {
+    width: 20%;
     display: inline-block;
      /*justify-content: flex-end;*/
    }
   
   header nav ul {
-    justify-content: ;
-    margin: 0;
+    justify-content: space-between;
+    margin: 0; /*don't know if this is necessary*/
    }
 
   .header-divider {
     display: none;
   }  
 
-  footer {
-    height: 330px;
-  }
-  
-  footer .content-wrapper {
-    width: 100%;
-  }
-  
-  .footer-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  footer .contact, footer .social {
-   text-align: center;
-   display: inline-block;
-   padding: 60px;
-    } 
 
 /**********for rest of home page on tablet******/
 
+/*-------Hero area ------------*/
+
   .hero-area {
-   height: 600px;
-  }
+/*   height: 600px;
+*/  }
+
+/*-------Aside forms area ------------*/
 
   aside {
-   height: 240px;
-  }
+/*   height: 240px;
+*/  }
   
   aside .content-wrapper {
-   display: flex;
-   justify-content: space-between;
-   align-items: ;
-   flex-flow: row wrap;
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    /* wouldn't this work better as a column wrap?8/
   }
 
   .form-description, .form {
     width: 45%;
-    display: inline-block;
+    /*display: inline-block;not shown in solution*/
+    margin: 0;
    }
+
+/*-------Features area ------------*/
   
   .features {
-    height: 850px;
+    /*height: 850px;*/
   }
   
   .features article {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: row wrap;
-    flex-basis: auto;
-    padding: 25px 55px;
+    flex-flow: column wrap;
+    flex-basis: 50%;
+    /* column and flex-basis:50%; */
   }
 
+    .features .features-item-description {
+      width: 50%;
+    }
+
+
+/*-------Reviews area ------------*/
+
   .reviews {
-    height: 500px;
-  }
+/*    height: 500px;
+*/  }
   
   .reviews article {
     display: flex;
-    justify-content: center;
-    width: 100%;
-    margin: 0;
-  }
-  
-  .reviews p {
-    width: 50%;
+    justify-content: space-between;
+    /*width: 100%;
+    margin: 0;not shown in solution*/
   }
 
+  
+  .reviews .review-item {
+    width: 49%;
+  } /* solution has .reviews article div
+   I added a class to the div*/
+  /******** footer*****/
+
+  footer {
+    /*height: 330px;*/
+  }
+  
+  footer .content-wrapper {
+    width: 65%;
+    margin: 100px 0;
+    /*not sure why width is
+     only 65% and how to determine margins*/
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  footer .contact {
+     margin-bottom: 0; /*not sure why*/
+   /*padding: 60px;*/
+    }   
+
+  footer .copyright {
+    width: 100%;
+  }  
+
    /**********about page for tablet******/
-  .mission {
+
+  /*.mission {
     height: 450px;
     margin: 65px;
-  }
+  }*/
   
   .mission-content {
     display: flex;
-    justify-content: ;
+    justify-content: space-between;
+    flex-basis: 50%;  /* added this and 
+    it created 2 columns of the paragraphs*/
     align-items: center;
-  }
-
-  .mission h2 {
-    padding-top: 30px;
-    width: 80%;
+    padding-top: 20px;
   }
 
   .mission-content p {
-    width: 40%;
+    width: 45%;
     padding: 30px 0px; 
+    /*solution doesn't show padding*/
   }
 
+ /* .mission h2 {
+    padding-top: 30px;
+    width: 80%;
+  }*/
+
+  .contact-section .content-wrapper h2 {
+    width: 80%;
+    padding: 30px 0px; /*not shown in solution*/
+  }
+
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+/*-----------nothing from here to 
+bottom of this tablet about page shown in solution*/
   .map {
      height: 350px;
   }
   
 
-  .contact-section {
-    display: flex;
-    margin: 65px;
-    height: 420px;
-  }
   .contact-section .content-wrapper {
   
   }
-  .contact-section .content-wrapper h2 {
-    width: 70%; 
-    padding: 30px 0px;
-  }
- 
-  .contact-content {
-     display: flex;
-     justify-content: ;
-     align-items: center;
-   }
-
+  
    .contact-content h4 {
       padding: 20px 0px;     
    }
@@ -571,13 +621,29 @@ footer .copyright {
       width: 45%;
       margin: 0;
       padding-bottom: 30px;
-      display: inline-block;
+      /*none shown in solution*/
    }
 
       /**********FAQ page for tablet******/
+  
+  .faq .content-wrapper {
+    justify-content: space-between;
+    margin: 65px; /*not shown in solution*/
+  }
+
   .faq-content {
-    flex-basis: auto;
-   }
+    flex-basis: 45%;
+  }
+
+  .faq h2 {
+    width: 100%;
+  }
+
+  /*.faq .faq-content {
+    width: 40%;
+    display: inline-block;
+  }not shown in solution*/
+
 }
 
 
