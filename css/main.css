@@ -111,7 +111,7 @@ footer {
 
 /* ----- Header Styles ------------*/
 header {
-   height: 275px;
+   height: 120px;
    padding: 15px;
 }
 header .content-wrappper {
@@ -124,11 +124,14 @@ header .content-wrappper {
 
 header a img {
   width: 60%;
+  padding: ;
 }
 
 header .header-divider {
   width: 100%;
-  /* make this a horizontal line*/
+  height: 2px;
+  background-color: black;
+/* color should be #e2e3ed*/ 
 }
 
 header nav {
@@ -141,9 +144,18 @@ header nav {
 }
 
 header nav ul {
-   display:flex;
+  display:flex;
   justify-content: space-around;
   width: 150px;
+
+  padding:;
+}
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
 }
 
 footer .social-icons {
@@ -245,11 +257,11 @@ aside .form-description p {
 }
 
 .reviews h2 {
-  width: 300px;
+  width: 80%;
   padding: 15px 0px;
 }
 .reviews h3 {
-  width: 175px;
+  width: 50%;
   padding: 20px 0px;
 }
 .reviews p {
@@ -291,6 +303,10 @@ footer .copyright {
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
+}
+
+.map {
+  width: 100%;
 }
  /* =====================================================
  FAQ page
@@ -399,16 +415,176 @@ footer .copyright {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+@media only screen and (min-width: 768px) {
+  /* Tablet style  here */
+  /********for header and footer*****/
+  
+  header {
+    width: 100%;
+     margin: 0;
+     height: 100px;
+     justify-content: ;
+     /* don't know what justify-content does 
+     here, gets center from the header, footer above/*/
+  }
+  
+  header .content-wrapper {
+    justify-content: ;
+    /*don't know what this does, also this has a default margin*/
+  }
+  
+  header nav {
+    display: inline-block;
+     /*justify-content: flex-end;*/
+   }
+  
+  header nav ul {
+    justify-content: ;
+    margin: 0;
+   }
+
+  .header-divider {
+    display: none;
+  }  
+
+  footer {
+    height: 330px;
+  }
+  
+  footer .content-wrapper {
+    width: 100%;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  footer .contact, footer .social {
+   text-align: center;
+   display: inline-block;
+   padding: 60px;
+    } 
+
+/**********for rest of home page on tablet******/
+
+  .hero-area {
+   height: 600px;
+  }
+
+  aside {
+   height: 240px;
+  }
+  
+  aside .content-wrapper {
+   display: flex;
+   justify-content: space-between;
+   align-items: ;
+   flex-flow: row wrap;
+  }
+
+  .form-description, .form {
+    width: 45%;
+    display: inline-block;
+   }
+  
+  .features {
+    height: 850px;
+  }
+  
+  .features article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+    flex-basis: auto;
+    padding: 25px 55px;
+  }
+
+  .reviews {
+    height: 500px;
+  }
+  
+  .reviews article {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+  }
+  
+  .reviews p {
+    width: 50%;
+  }
+
+   /**********about page for tablet******/
+  .mission {
+    height: 450px;
+    margin: 65px;
+  }
+  
+  .mission-content {
+    display: flex;
+    justify-content: ;
+    align-items: center;
+  }
+
+  .mission h2 {
+    padding-top: 30px;
+    width: 80%;
+  }
+
+  .mission-content p {
+    width: 40%;
+    padding: 30px 0px; 
+  }
+
+  .map {
+     height: 350px;
+  }
+  
+
+  .contact-section {
+    display: flex;
+    margin: 65px;
+    height: 420px;
+  }
+  .contact-section .content-wrapper {
+  
+  }
+  .contact-section .content-wrapper h2 {
+    width: 70%; 
+    padding: 30px 0px;
+  }
+ 
+  .contact-content {
+     display: flex;
+     justify-content: ;
+     align-items: center;
+   }
+
+   .contact-content h4 {
+      padding: 20px 0px;     
+   }
+
+   .contact-content p {
+      width: 45%;
+      margin: 0;
+      padding-bottom: 30px;
+      display: inline-block;
+   }
+
+      /**********FAQ page for tablet******/
+  .faq-content {
+    flex-basis: auto;
+   }
 }
 
-@media print,
-  (-webkit-min-device-pixel-ratio: 1.25),
-  (min-resolution: 1.25dppx),
-  (min-resolution: 120dpi) {
-  /* Style adjustments for high resolution devices */
+
+@media only screen and (min-width: 1200px) {
+  /* Desktop style  here */
 }
+
 
 /* ==========================================================================
    Print styles.
