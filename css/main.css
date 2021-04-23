@@ -489,20 +489,19 @@ aside .form-description p {
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
-    /* wouldn't this work better as a column wrap?8/
   }
 
-  .form-description, .form {
+  aside .content-wrapper .form-description, 
+  aside .content-wrapper .form {
     width: 45%;
-    /*display: inline-block;not shown in solution*/
     margin: 0;
    }
 
-/*-------Features area ------------*/
+/*-------Features area ------------
   
   .features {
-    /*height: 850px;*/
-  }
+    /*height: 850px;
+  } */
   
   .features article {
     display: flex;
@@ -513,9 +512,9 @@ aside .form-description p {
     /* column and flex-basis:50%; */
   }
 
-    .features .features-item-description {
-      width: 50%;
-    }
+  .features .features-item-description {
+     width: 50%;
+   }
 
 
 /*-------Reviews area ------------*/
@@ -536,6 +535,7 @@ aside .form-description p {
     width: 49%;
   } /* solution has .reviews article div
    I added a class to the div*/
+
   /******** footer*****/
 
   footer {
@@ -646,9 +646,78 @@ bottom of this tablet about page shown in solution*/
 
 }
 
+  /************* Desktop style  here ************/
 
 @media only screen and (min-width: 1200px) {
-  /* Desktop style  here */
+
+  /************* Desktop style  here ************/
+
+  .content-wrapper {
+    max-width: 960px;
+  }
+
+  /* -----------Hero area ------------ */
+
+  .hero-area h1 {
+    width: 60%;
+  }
+
+  /* -----------Aside forms area --------- */
+  
+  aside .content-wrapper {
+    justify-content: space-between;
+  } 
+  
+  aside .content-wrapper .form-description, 
+  aside .content-wrapper .form {
+    width: 30%;
+    margin: 0;
+   }
+
+  /* -----------features area --------- */
+
+  .features h2 {
+      width: 90%;
+  }
+  
+  .features article {
+    flex-basis: 33.3%;
+    /*display: flex and others already working here;
+  }
+
+  /* -----Review area ---- */
+
+  .reviews {
+/*    height: 500px;
+*/  }
+  
+  .reviews article {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+  }
+
+  .reviews img, /*moved image in html out of class .review-item*/
+  .reviews .review-item {
+    width: 42%;
+  } /* solution has .reviews article div
+   I added a class to the div*/
+
+  /* -----footer area ---- */
+
+  /* ------------------About page-------------------*/
+  .mission h2,
+  .contact-section .content-wrapper h2 {
+     width: 95%;
+  }
+
+  /* ------------------FAQ page ------------------- */
+
+  .faq h2 {
+    width: 100%;
+  }
+
+
 }
 
 
