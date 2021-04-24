@@ -94,7 +94,7 @@ html {
 body {
   font-family: 'Open Sans', sana-serif;
   font-size: 1em;
-  background-color: #282828;
+  text-align: left;
   color: #e2e3ed;
 }
  
@@ -106,7 +106,6 @@ ol {
 a {
   color: #e2e3ed;
   text-decoration: none;
-  font-family: 'Open Sans', sans-serif;
 }
  
 h1,
@@ -126,13 +125,13 @@ h2 {
 h3, 
 h4 {
   font-size: 1.125em;
+  margin: 20px 0;
 }
 
 
 p {
   font-size: .875em;
-  line-height: 1.125em;
-  font-family: 'Open Sans', sans-serif;
+  line-height: 1.285em;
 }
  
 img {
@@ -144,10 +143,12 @@ figure {
 }
  
 address {
- font-family: 'Open Sans', sans-serif;
+ font-style: normal;
 }
  
 .content-wrapper {
+  width: 90%
+  margin: 50px 0;
  
 }
 /* ----------------------Base Header - Footer Styles ------------*/
@@ -170,6 +171,8 @@ footer {
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
+   background-color: #282828;
+
    /*width: 100%;not needed*/
 }
 
