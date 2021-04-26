@@ -149,19 +149,13 @@ address {
 .content-wrapper {
   width: 90%
   margin: 50px 0;
- 
-}
+ }
 /* ----------------------Base Header - Footer Styles ------------*/
 
 /*html body {
   margin: 0px;
   not shown on solution
 }*/
-
-.content-wrapper {
-  width: 90%;
-  margin: 50px 0;
-}
 
 /*-------------base header and footer styles -----*/
 
@@ -172,14 +166,13 @@ footer {
    align-items: center;
    flex-flow: row wrap;
    background-color: #282828;
-
+   text-align: center;
    /*width: 100%;not needed*/
 }
 
 /* -----base  Header Styles ------------*/
 header {
-   /*height: 120px;not shown in solution*/
-   padding: 15px 0;
+   height: 120px;
 }
 
 header .content-wrappper {
@@ -193,13 +186,13 @@ header .content-wrappper {
 header a img {
   width: 60%;
   padding: ;
+  
 }
 
 .header-divider {
   width: 100%;
   height: 2px;
-  background-color: black;
-/* color should be #e2e3ed*/
+  background-color: #2a2a2a;
   margin: 10px 0 20px 0; 
 }
 
@@ -208,21 +201,20 @@ header nav {
    justify-content: space-around;
    align-items: center;
    flex-flow: row wrap;  
-   width: 60%;
-
 }
 
 header nav ul {
   display:flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
-  padding:;
+  padding: 0;
 }
 
 header nav ul li {
 }
 
 header nav ul li a {
+  text-transform: uppercase;
  
 }
 
@@ -233,7 +225,6 @@ footer {
 
 footer .content-wrapper {
    width: 55%;
-   margin: 50px 0;
 }
 
 /*footer .contact {
@@ -268,17 +259,26 @@ footer .copyright {
 
 .hero-area {
    display:flex;
-   justify-content: center;
+   justify-content: flex-start;
    flex-flow: row wrap;
-   width: 90%; 
-   /*the width is not shown in solution*/
+   align-items: flex-start;  /*don't know what this does*/
+   background: url("../img/hero-image.jpg") center no-repeat #333;
+   /* no alt for the image works*/
+   background-size: cover;
+   height: 500px;
+}
+
+.hero-area .content-wrapper {
+  margin: 0;
 }
 .hero-area h1 {
-   padding: 50px 20px;
+   padding: 15px 20px;
+   width: 75%;
+   font-weight: 300px;
   /*may have to enter some margin here*/
 }
 
-/*  ---Aside ---*/
+/*  --------------Aside ---------------*/
 
 aside {
    background-color: #527158;
@@ -286,9 +286,14 @@ aside {
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
-   margin: 20px;
-   /* margin not shown in solutions*/
+   margin: 0px;
+   padding: 20px 20px 50px 20px;
 }
+
+aside .content-wrapper {
+   width: 100%;
+}
+
 aside h3 {
    padding: ;
 }
@@ -296,23 +301,55 @@ aside h3 {
 aside .form-description p {
    padding: ;
 }
-.form input {
-   width: 100%;
-   display: block;
+aside .form {
+  margin-top: 30px;
 }
 
+.form input {
+   width: 90%;
+   display: block;
+}
+input [type=text] {
+  box-sizing: border-box;
+  width: 90%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
 
-/*  ---- features ----*/
+input [type=button] {
+  width: 90%;
+  padding: 20px 0 50px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color:#e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+aside .form .download-itinerary {
+  background-color: #2a423a;
+}
+
+/*  ------------ features ---------------*/
 
 .features {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
   padding: 20px;
+  background: url("../img/features.jpg" ) center no-repeat #333;
+  /*alt="outdoor picnic" don't know how to make this work*/
+  background-size: cover;
+  height: 1450px;
 }
 
 .features h2 {
-  padding: 10px 0px;
+  padding: 30px 0 60px 0;
   /* solution code just has margin-bottom: 60px; */
 }
 
@@ -322,6 +359,7 @@ aside .form-description p {
 }
 
 .features .features-items {
+   text-align: center;
    display:flex;
    justify-content: center;
    align-items: center;
@@ -343,6 +381,10 @@ aside .form-description p {
    /* padding not shown in solution*/
 }
 
+/*.reviews .content-wrapper {
+   width: 100%;
+}*/
+
 .reviews h2 {
   width: 80%;
   padding: 15px 0px;
@@ -351,8 +393,12 @@ aside .form-description p {
 
 .reviews h3 {
   width: 55%;
-  padding: 20px 0px;
 }
+
+img {
+    height: 200px;
+   }
+
 .reviews p {
   padding-bottom: 25px;
    /* reviews p not shown in solution*/
@@ -362,18 +408,18 @@ aside .form-description p {
 /* =====================================================
  about page
  =====================================================*/
-.mission {
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   flex-flow: row wrap;
-}
-
+.mission,
 .contact-section {
    display:flex;
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
+   background-color: #527158;
+   padding: 50px 20px;
+}
+
+.contact-section {
+   background-color: #2a423a;
 }
 
 .map {
@@ -393,10 +439,11 @@ aside .form-description p {
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
+   padding: 20px;
+   background-color: #527158;
 }
 
-.faq .content-wrapper {
-   margin: 50px 0 0 0;  
+.faq .content-wrapper {  
    display:flex;
    justify-content: center;
    align-items: center;
@@ -404,12 +451,17 @@ aside .form-description p {
 }
 
 .faq h2 {
-  margin-bottom: 40px;
+  margin: 0;
 }
 
 .faq-content {
-  margin-bottom: 50px;
+  padding: 25px 0;
 }
+
+.faq .faq-content h4 {
+  margin: 15px 0;
+}
+
 
 
 /* ==========================================================================
@@ -512,19 +564,19 @@ aside .form-description p {
   /********for header *****/
   
   header {
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 3px 0; 
   }
   
   header .content-wrapper {
     width: 100%;
-    justify-content: space-between;
-    /*don't know what this as header and 
-    header .content-wrapper seem to be the same container to me.*/
+    justify-content: space-between;  
+    margin: auto 0; 
   }
+
   
   header nav {
-    width: 20%;
+    width: 25%;
     display: inline-block;
      /*justify-content: flex-end;*/
    }
@@ -537,8 +589,15 @@ aside .form-description p {
   .header-divider {
     display: none;
   }  
+  
+  .reviews .content-wrapper {
+    margin: auto 0;
+  }
 
-
+  .reviews h2,
+  .reviews .review-item h3 {
+    margin: 0;
+  }
 /**********for rest of home page on tablet******/
 
 /*-------Hero area ------------*/
@@ -580,9 +639,11 @@ aside .form-description p {
     flex-basis: 50%;
     /* column and flex-basis:50%; */
   }
-
+  /*none of this is showing in the style sheet*/
   .features .features-item-description {
      width: 50%;
+     padding: 45px 0 45px 0;
+     text-align: center;
    }
 
 
@@ -595,6 +656,8 @@ aside .form-description p {
   .reviews article {
     display: flex;
     justify-content: space-between;
+
+
     /*width: 100%;
     margin: 0;not shown in solution*/
   }
