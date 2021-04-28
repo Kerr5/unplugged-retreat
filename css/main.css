@@ -134,11 +134,11 @@ p {
 }
  
 img {
- 
+  width: 100%; 
 }
  
 figure {
- 
+ margin:0;
 }
  
 address {
@@ -146,7 +146,7 @@ address {
 }
  
 .content-wrapper {
-  width: 90%
+  width: 90%;
   margin: 50px 0;
  }
 /* ----------------------Base Header - Footer Styles ------------*/
@@ -164,11 +164,9 @@ footer {
 
 /* -----base  Header Styles ------------*/
 header {
-   height: 120px;  /*not shown in solutions*/
-   padding-bottom: 15px 0; /*from solutions*/
+   padding-bottom: 15px;
 }
-
-header .content-wrappper {
+header .content-wrapper {
    margin: 0;
    display:flex;
    justify-content: center;
@@ -176,10 +174,12 @@ header .content-wrappper {
    flex-flow: row wrap;
 }
 
-/*nothing is solutions for header a img*/
-header a img {
+header figure {
   width: 60%;
-  padding: ;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
 }
 
 .header-divider {
@@ -194,17 +194,17 @@ header nav {
   font-size: 1.125em; /*from solutions*/
   font-weight: 700;  /*from solutions*/
   text-transform: uppercase;  /*I had in nav ul li a solutions*/
-   display:flex;
-   justify-content: space-around;
-   align-items: center;
-   flex-flow: row wrap;  
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;  
 }
 
 header nav ul {
   width: 100%;
   display:flex;
   justify-content: space-between;
-  padding: 0;  /*not shown in  solutions*/
+ 
 }
 
 header nav ul li {
@@ -232,7 +232,6 @@ footer .contact {
   margin-bottom: 50px;   /*I have a dif padding below*/
 }
 footer .contact, footer .social {
-  padding: 25px;
 }
 
 footer .social-icons {
@@ -260,7 +259,7 @@ footer .copyright {
 
 .hero-area {
    display:flex;
-   justify-content: flex-start;
+   justify-content: center;
    flex-flow: row wrap;
    /*img below added ahead of this lesson*/
    background: url("../img/hero-image.jpg") center no-repeat #333;
@@ -269,16 +268,11 @@ footer .copyright {
    height: 500px;
 }
 
-.hero-area .content-wrapper { /*not shown in solutions*/
-  margin: 0;
-}
-
 .hero-area h1 {
    font-size: 2.25em;
-   font-weight: 500;  /*i had weight 300 solutions*/
+   font-weight: 500; 
    line-height: 1.2;  /*from solutions*/
-   padding: 15px 20px;  /*not shown in solutions*/
-   width: 75%;  /*not shown in solutions*/
+   margin: 0 0 0 20px;  /*added this so text wasn't along left margin*/
 }
 
 
@@ -289,13 +283,7 @@ aside {
    display:flex;
    justify-content: center;
    align-items: center;
-   flex-flow: row wrap;
-   margin: 0px;  /*not shown in solutions*/
-   padding: 20px 20px 50px 20px;  /*not shwon in solutions*/
-}
-
-aside .content-wrapper {
-   width: 100%;  /*not shown in  solutions*/
+   flex-flow: row wrap; 
 }
 
 aside .form {
@@ -317,7 +305,6 @@ input [type=text] {
 
 input [type=button] {
   width: 90%;
-  padding: 20px 0 50px 0;  /*i have 50px on bottom, not shown in solutions*/
   margin-top: 20px;
   background-color: #2a423a;
   font-family: 'Poppins', helvetica, Arial, sans-serif;
@@ -339,7 +326,6 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  padding: 20px;
   /*photo not shown in solutions yet*/
   background: url("../img/features.jpg" ) center no-repeat #333;
   /*alt="outdoor picnic" don't know how to make this work*/
@@ -347,13 +333,12 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 }
 
 .features h2 {
-  padding: 30px 0 60px 0;
-  /* solution code just has margin-bottom: 60px; */
-}
+  margin: 0 0 60px 0;/* solution code just has margin-bottom: 60px; */
+  }
 
 .features article {
    width: 63%;
-   padding: 25px 0;
+   margin: 30px 0;
 }
 
 .features .features-items {
@@ -363,8 +348,8 @@ aside .form .download-itinerary {  /*not shown in solutions*/
    flex-flow: row wrap;
 }
 
-.features p {
-  text-align: center;  /* i had under features-items*/
+.features .features-item-description {
+  text-align: center;  
   margin: 0;
 }
 
@@ -375,32 +360,19 @@ aside .form .download-itinerary {  /*not shown in solutions*/
    display:flex;
    justify-content: center;
    flex-flow: row wrap;
-   padding: 20px;
-   /* padding not shown in solution*/
 }
 
 .reviews h2 {
-  width: 80%;  /* not shown in solutions */
-  padding: 15px 0px;
-  /* margin-bottom: 40px; shown in solution*/
-  line-height: 1;  /* shown in solutions*/
-
+  margin-bottom: 40px; 
+  line-height: 1;  
 }
 
 .reviews h3 {
   width: 55%;
-  margin: 20px 0;  /*shown in solutions*/
-
+  margin: 20px 0; 
 }
 
-img {
-    height: 200px;
-   }
-
 .reviews p {
-  padding-bottom: 25px;
-   /* reviews p not shown in solution*/
-
 }
 
 /* =====================================================
@@ -411,8 +383,7 @@ img {
    display:flex;
    justify-content: center;
    align-items: center;
-   flex-flow: row wrap;
-   padding: 50px 20px;  /*not shown in solution*/
+   flex-flow: row wrap;   
 }
 
 .contact-section {
@@ -421,9 +392,11 @@ img {
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
-   padding: 50px 20px; /*not shown in solution*/
 }
 
+.contact-section h4 {
+  font-weight: 500; /*guessed*/
+}
 .map {
   width: 100%; /*not shown in solution*/
 }
@@ -440,9 +413,15 @@ img {
    background-color: #527158;
    display:flex;
    justify-content: center;
+   align-items: center; /*this may not be necessary*/
+   flex-flow: row wrap;
+   
+}
+.faq article {
+   display: flex;
+   justify-content: center;
    align-items: center;
    flex-flow: row wrap;
-   padding: 20px;  /*not shown in solution*/
 }
 
 .faq .content-wrapper {  
@@ -456,17 +435,16 @@ img {
 .faq h2 {
   margin: 0; /*not shown in solution*/
   margin-bottom: 40px; /* shown in solution*/
-  line-height: 1;  /* shown in solution*/
+  line-height: 1; 
 }
 
-.faq-content {
-  padding: 25px 0; /*not shown in solution*/
-  margin-bottom: 50px; /*shown in solution*/
+.faq .faq-content {
+  text-align: start;
+  margin-bottom: 40px; 
 }
 
 .faq .faq-content h4 {
-  margin: 15px 0; /*not shown in solution*/
-  line-height: 1.333; /* shown in solution*/
+    line-height: 1.333; 
 }
 
 
@@ -569,19 +547,17 @@ img {
   .content-wrapper {
     max-width: 640px;
     margin: 100px 0; 
-    /*kept changing margin from 100px o, to auto 0*/
   }
 
-  h2 { /* shown in solution*/
+  header figure {
+  width: 30%;
+  }
+
+  h2 { 
     font-size: 2.25em;
     line-height: 1.333;
   }
 
- /* h2,
-  h3,
-  h4 {
-    margin: 0; not shown in solution
-  }*/
   h3 {
     font-size: 1.5em;
     line-height: 1.25;  /*shown in solution*/
@@ -591,7 +567,7 @@ img {
   
   header {
     justify-content: space-around;
-    padding: 33px 0; /*I had 3 px, not 33px*/
+    padding: 33px 0; 
   }
   
   header .content-wrapper {
@@ -600,9 +576,9 @@ img {
   }
 
   header figure {
-    width: 30%;  /*don't know what this is, 
-    shown in solution*/
+    width: 30%;  
   }
+
   header nav {
     width: 20%;
     display: inline-block; /*not shown in solution*/
@@ -656,13 +632,11 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*width: 40%; not shown in solution*/
-    padding: 25px; /*not shown in solution*/
-    /*text-align: center;*/ /*not shown in solution*/
     flex-flow: column wrap; /* shown in solution*/
     flex-basis: 50%;  /* shown in solution*/
   }
-  .features-items {
+
+  .features .features-item-description {
     width: 62%;
   }
    
@@ -678,7 +652,7 @@ img {
   }
 
   .reviews .review-item {
-    width: 49%;
+    width: 45%;
   }
 
   .reviews h3 {
@@ -686,16 +660,12 @@ img {
     margin: 0;
   }
 
- /* .reviews img {
+.reviews figure {
     width: 45%;
-  }*/
+   }
 
   /******** footer*****/
 
-/*  footer {
-    height: 330px;
-  }
-  */
   footer .content-wrapper {
     width: 65%;
     margin: 100px 0;    
@@ -709,9 +679,8 @@ img {
   }
   
   footer .contact {
-     margin-bottom: 0; /*not sure why*/
-   /*padding: 60px;*/
-    } 
+     margin-bottom: 0; 
+  } 
 
   footer h4 {
      font-size: 1.5em;
@@ -727,35 +696,19 @@ img {
   }  
 
    /**************about page for tablet***********/
-
-  /*.mission {
-    height: 450px;
-    margin: 65px;
-  }*/
   
   .mission-content {
     display: flex;
     justify-content: space-between;
-    /*flex-basis: 50%;  added this and 
-    it created 2 columns of the paragraphs*/
     align-items: center;
-    padding-top: 20px;
   }
 
   .mission-content p {
-    width: 45%;
-    padding: 30px 0px; 
-    /*solution doesn't show padding*/
+    width: 45%;  
   }
-
- /* .mission h2 {
-    padding-top: 30px;
-    width: 80%;
-  }*/
 
   .contact-section .content-wrapper h2 {
     width: 80%;
-    padding: 30px 0px; /*not shown in solution*/
   }
 
   .contact-content {
@@ -776,21 +729,15 @@ bottom of this tablet about page shown in solution*/
      height: 350px;
   }
 
-  /*none shown in solution*/
-/*  .contact-content p {
-     width: 45%;
-     margin: 0;
-     padding-bottom: 30px;
-  }*/
 
       /**************FAQ page for tablet*************/
-  .faq .content-wrapper {
-    justify-content: space-between;
-    /*width: 100%; not in solution*/
-  }
+ 
 
-  .faq-content {
-     flex-basis: 45%;
+  .faq .faq-content {
+     display: flex;
+     justify-content: center;
+     flex-flow: column wrap;
+     flex-basis: 50%; 
   }
 
   .faq h2 {
@@ -798,9 +745,9 @@ bottom of this tablet about page shown in solution*/
   }
 
   .faq h4,
-  faq p {
+  .faq p {
     font-size: .875em;
-    line-height: 1.125;
+    width: 90%;
   }
 
 }
@@ -814,6 +761,10 @@ bottom of this tablet about page shown in solution*/
   /************* Desktop style  here ************/
   header {
     padding: 15px 0;
+  }
+
+  header figure {
+  width: 25%;
   }
 
   .content-wrapper {
@@ -838,7 +789,6 @@ bottom of this tablet about page shown in solution*/
   .hero-area h1 {
     font-size: 3.75em;
     width: 60%;
-    color: orange; /*here so I can easily see when we are desktop size*/
   }
 
   /* -----------Aside forms area for dessktop--------- */
