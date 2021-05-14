@@ -397,8 +397,19 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 .contact-section h4 {
   font-weight: 500; /*guessed*/
 }
-.map {
-  width: 100%; /*not shown in solution*/
+.map-container {
+  height: 0;
+  padding-bottom: 75%;
+  overflow: hidden;
+  position: relative;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;  
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .contact-content p {
