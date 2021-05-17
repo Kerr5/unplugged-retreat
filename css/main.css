@@ -397,9 +397,11 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 .contact-section h4 {
   font-weight: 500; /*guessed*/
 }
+
 .map-container {
+  width: 100%;
   height: 0;
-  padding-bottom: 75%;
+  padding-bottom: 125%;
   overflow: hidden;
   position: relative;
 }
@@ -718,6 +720,10 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     width: 45%;  
   }
 
+  .map-container {
+    padding-bottom: 50%;
+  }
+
   .contact-section .content-wrapper h2 {
     width: 80%;
   }
@@ -736,9 +742,6 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 
 /*-----------nothing from here to 
 bottom of this tablet about page shown in solution*/
-  .map {
-     height: 350px;
-  }
 
 
       /**************FAQ page for tablet*************/
@@ -852,6 +855,9 @@ bottom of this tablet about page shown in solution*/
      font-size: 3em;
   }
 
+  .map-container {
+    padding-bottom: 40%;
+  }
   contact-content h4 {
     font-size: 1.875em;
   }
