@@ -553,6 +553,7 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 /************* Tablet style  here ******************/
 /************************************************************/
 
+
 @media only screen and (min-width: 768px) {
   /* Tablet style  here */
 
@@ -595,12 +596,12 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   header nav {
     width: 20%;
     display: inline-block; /*not shown in solution*/
-   }
+  }
   
   header nav ul {
     justify-content: space-between;
     margin: 0; /*don't know if this is necessary, not in solution*/
-   }
+  }
 
   .header-divider {
     display: none;
@@ -635,7 +636,7 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     margin: 0;
    }
 
--------Features area ------------
+/* -------Features area ------------ */
 
   .features h2 {
     margin-bottom: 20px; /* shown in solution*/
@@ -673,9 +674,9 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     margin: 0;
   }
 
-.reviews figure {
+  .reviews figure {
     width: 45%;
-   }
+  }
 
   /******** footer*****/
 
@@ -765,14 +766,14 @@ bottom of this tablet about page shown in solution*/
   }
 
 }
+
 /************************************************************/
   /************* Desktop style  here ************/
 /************************************************************/
 
 
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width: 1200px) {
 
-  /************* Desktop style  here ************/
   header {
     padding: 15px 0;
   }
@@ -815,12 +816,12 @@ bottom of this tablet about page shown in solution*/
   aside .content-wrapper .form {
     width: 30%;
     margin: 0; /*not shown in solution*/
-   }
+  }
 
-   .form-description p {
-    font-size: 1.125em
-    line-height: 1.33; /*not shown in solution*/
-   }
+  .form-description p {
+  font-size: 1.125em
+  line-height: 1.33; /*not shown in solution*/
+  }
 
   /* -----------features area for desktop--------- */
 
@@ -830,7 +831,7 @@ bottom of this tablet about page shown in solution*/
   
   .features article {
     flex-basis: 33.3%;
-    /*display: flex and others already working here;
+    /*display: flex and others already working here; */
   }
 
   /* ----------Review area for desktop ---------- */
@@ -856,8 +857,9 @@ bottom of this tablet about page shown in solution*/
   }
 
   .map-container {
-    padding-bottom: 40%;
+    padding-bottom: 37%; 
   }
+
   contact-content h4 {
     font-size: 1.875em;
   }
