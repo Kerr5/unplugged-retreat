@@ -124,7 +124,7 @@ h3,
 h4 {
   font-size: 1.125em;
   font-weight: 500;  /*from solutions*/
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 
@@ -147,7 +147,7 @@ address {
  
 .content-wrapper {
   width: 90%;
-  margin: 50px 0;
+  margin-bottom: 20px;
  }
 /* ----------------------Base Header - Footer Styles ------------*/
 
@@ -215,7 +215,7 @@ header nav ul li {
 
 /* -----base  footer Styles ------------*/
 footer {
-   text-align: center;   /*I haad in header/footer. here from solutions*/
+   text-align: center;   /*I had in header/footer. here from solutions*/
   flex-direction: column;
 }
 
@@ -246,6 +246,12 @@ footer .social-icons p {
    justify-content: center;
    align-items: center;
   }
+
+footer i {
+  font-size: 2.5em;  /* seemed 19 point is PS, bit looked too small*/
+  margin-bottom: 40px;
+  color: #527158;
+  }  
 
 footer .copyright {
   margin: 20px 0;
@@ -293,6 +299,7 @@ aside .form {
 .form input {  /*not shown in solutions*/
    width: 90%;
    display: block;
+   color: #babbc2;
 }
 
 input [type=text] {
@@ -310,7 +317,6 @@ input [type=button] {
   font-family: 'Poppins', helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 1.125em;
-  color:#e2e3ed;
   border: none;
   text-align: center;
   text-transform: uppercase;
@@ -318,6 +324,7 @@ input [type=button] {
 
 aside .form .download-itinerary {  /*not shown in solutions*/
   background-color: #2a423a;
+  color:#e2e3ed;
 }
 
 /*  ------------ features ---------------*/
@@ -336,6 +343,7 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   font-size: 3.75em;
   margin-bottom: 40px;
 }
+
 .features h2 {
   margin: 0 0 60px 0;/* solution code just has margin-bottom: 60px; */
   }
@@ -350,6 +358,7 @@ aside .form .download-itinerary {  /*not shown in solutions*/
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;
+   text-align: center;
 }
 
 .features .features-item-description {
@@ -451,13 +460,13 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 
 .faq h2 {
   margin: 0; /*not shown in solution*/
-  margin-bottom: 40px; /* shown in solution*/
+  margin-bottom: 25px; /* shown in solution*/
   line-height: 1; 
 }
 
 .faq .faq-content {
   text-align: start;
-  margin-bottom: 40px; 
+  margin-bottom: 25px; 
 }
 
 .faq .faq-content h4 {
