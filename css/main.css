@@ -332,6 +332,10 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   background-size: cover;
 }
 
+.features i {
+  font-size: 3.75em;
+  margin-bottom: 40px;
+}
 .features h2 {
   margin: 0 0 60px 0;/* solution code just has margin-bottom: 60px; */
   }
