@@ -92,15 +92,17 @@ html {
 }
  
 body {
+  color: #e2e3ed;
   font-family: 'Open Sans', sana-serif;
   font-size: 1em;
   text-align: left;
-  color: #e2e3ed;
 }
  
 ul, 
 ol {
   list-style-type: none;
+  margin: 0;  /*from solutions*/
+  padding-bottom: 0;
 }
  
 a {
@@ -118,6 +120,7 @@ h4 {
 h2 {
   font-size: 1.875em;
   font-weight: 500;  /*from solutions*/
+  margin: 0;
 }
 
 h3, 
@@ -149,6 +152,9 @@ address {
   width: 90%;
   margin-bottom: 20px;
  }
+ /*solutions for content-wrapper show margin: 50px 0; */
+
+
 /* ----------------------Base Header - Footer Styles ------------*/
 
 /*-------------base header and footer styles -----*/
@@ -159,7 +165,7 @@ footer {
    display:flex;
    justify-content: center;
    align-items: center;
-   flex-flow: row wrap;  /*had this under hearer. from solutions*/
+   flex-flow: row wrap;  /*had this under header. from solutions*/
 }
 
 /* -----base  Header Styles ------------*/
@@ -225,37 +231,35 @@ footer p {
 
 footer .content-wrapper {
    width: 55%;
-   margin: 50px 0;
+   margin: 25px 0;
 }
 
 footer .contact {
-  margin-bottom: 50px;   /*I have a dif padding below*/
-}
-footer .contact, footer .social {
+  margin-bottom: 50px;  
 }
 
 footer .social-icons {
    display:flex;
-   justify-content: space-around;
+   justify-content: space-between;
    align-items: center;
-  }
+   width: 200px;
+}
 
 footer .social-icons p {
-   /*margin: 0; shown above footer p */
    display:flex;
    justify-content: center;
    align-items: center;
-  }
+   width: 40px;
+   height: 40px;
+}
 
 footer i {
   font-size: 2.5em;  /* seemed 19 point is PS, bit looked too small*/
-  margin-bottom: 40px;
   color: #527158;
-  }  
+}  
 
 footer .copyright {
   margin: 20px 0;
-  text-align: center;  /*not shown in solutions*/
 }  
 
 /* ----------------Mobile Styles - Homepage ------------*/
@@ -264,23 +268,19 @@ footer .copyright {
 /*  -----Hero area ------*/
 
 .hero-area {
+  background: url("../img/hero-image.jpg") center no-repeat #333;
+  background-size: cover;
+  min-height: 500px;
    display:flex;
    justify-content: center;
    flex-flow: row wrap;
-   /*img below added ahead of this lesson*/
-   background: url("../img/hero-image.jpg") center no-repeat #333;
-   /* no alt for the image works*/
-   background-size: cover;
-   height: 500px;
 }
 
 .hero-area h1 {
    font-size: 2.25em;
    font-weight: 500; 
    line-height: 1.2;  /*from solutions*/
-   margin: 0 0 0 20px;  /*added this so text wasn't along left margin*/
 }
-
 
 /*  --------------Aside ---------------*/
 
@@ -300,6 +300,7 @@ aside .form {
    width: 90%;
    display: block;
    color: #babbc2;
+   height: 35px;
 }
 
 input [type=text] {
@@ -325,27 +326,21 @@ input [type=button] {
 aside .form .download-itinerary {  /*not shown in solutions*/
   background-color: #2a423a;
   color:#e2e3ed;
+  height: 40px;
 }
 
 /*  ------------ features ---------------*/
 
 .features {
+  background: url("../img/features.jpg" ) center no-repeat #333;
+  background-size: cover;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
-  /*photo not shown in solutions yet*/
-  background: url("../img/features.jpg" ) center no-repeat #333;
-  /*alt="outdoor picnic" don't know how to make this work*/
-  background-size: cover;
-}
-
-.features i {
-  font-size: 3.75em;
-  margin-bottom: 40px;
 }
 
 .features h2 {
-  margin: 0 0 60px 0;/* solution code just has margin-bottom: 60px; */
+  margin-bottom: 60px;
   }
 
 .features article {
@@ -359,6 +354,11 @@ aside .form .download-itinerary {  /*not shown in solutions*/
    align-items: center;
    flex-flow: row wrap;
    text-align: center;
+}
+
+.features i {
+  font-size: 3.75em;
+  margin-bottom: 40px;
 }
 
 .features .features-item-description {
@@ -385,9 +385,6 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   margin: 20px 0; 
 }
 
-.reviews p {
-}
-
 /* =====================================================
  about page
  =====================================================*/
@@ -397,18 +394,6 @@ aside .form .download-itinerary {  /*not shown in solutions*/
    justify-content: center;
    align-items: center;
    flex-flow: row wrap;   
-}
-
-.contact-section {
-   background-color: #2a423a;
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   flex-flow: row wrap;
-}
-
-.contact-section h4 {
-  font-weight: 500; /*guessed*/
 }
 
 .map-container {
@@ -427,6 +412,14 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   left: 0;
 }
 
+.contact-section {
+  background-color: #2a423a;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
 .contact-content p {
   margin: 0;
 }
@@ -439,15 +432,9 @@ aside .form .download-itinerary {  /*not shown in solutions*/
    background-color: #527158;
    display:flex;
    justify-content: center;
-   align-items: center; /*this may not be necessary*/
+   align-items: center; 
    flex-flow: row wrap;
    
-}
-.faq article {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-flow: row wrap;
 }
 
 .faq .content-wrapper {  
@@ -472,8 +459,6 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 .faq .faq-content h4 {
     line-height: 1.333; 
 }
-
-
 
 /* ==========================================================================
    Helper classes
@@ -570,14 +555,10 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 @media only screen and (min-width: 768px) {
   /* Tablet style  here */
 
-  /*--- Genereal Stylers ----*/
+  /*--- Genereal Styles ----*/
   .content-wrapper {
     max-width: 640px;
-    margin: 100px 0; 
-  }
-
-  header figure {
-  width: 30%;
+    margin: 90px 0; 
   }
 
   h2 { 
@@ -592,6 +573,10 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 
   /********for header *****/
   
+  header figure {
+    width: 30%;
+    }
+
   header {
     justify-content: space-around;
     padding: 33px 0; 
@@ -602,10 +587,6 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     justify-content: space-between;  
   }
 
-  header figure {
-    width: 30%;  
-  }
-
   header nav {
     width: 20%;
     display: inline-block; /*not shown in solution*/
@@ -613,16 +594,20 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   
   header nav ul {
     justify-content: space-between;
-    margin: 0; /*don't know if this is necessary, not in solution*/
   }
 
   .header-divider {
     display: none;
   }  
-  h2,
-  h3 { /* not shown in solution */
+
+  /* Hero area ---------*/
+  h2 { 
     margin: 0;
   }
+
+  footer .content-wrapper {
+    margin: 75px 0;
+ }
 
 /**********for rest of home page on tablet******/
 
@@ -637,7 +622,7 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 /*-------Aside forms area ------------*/
   
   aside .content-wrapper {
-    margin: 50px 0;
+    margin: 35px 0;
     display: flex;
     justify-content: space-between;
     flex-flow: row wrap;
@@ -659,12 +644,16 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column wrap; /* shown in solution*/
+    flex-flow: column wrap; 
     flex-basis: 50%;  /* shown in solution*/
   }
 
   .features .features-item-description {
     width: 62%;
+  }
+
+  .features i {
+    font-size: 4.25em;
   }
    
 /*-------Reviews area ------------*/
@@ -687,15 +676,11 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     margin: 0;
   }
 
-  .reviews figure {
-    width: 45%;
-  }
-
   /******** footer*****/
 
   footer .content-wrapper {
     width: 65%;
-    margin: 100px 0;    
+    /* margin: 80px 0;     */
   }
   
   footer .footer-content {
@@ -750,22 +735,13 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 
   .contact-content h4 {
     font-size: 1.5em; 
-    margin: 0px; /* not shown in solution*/
-    padding: 20px 0px; 
+    padding: 20px 0px; /*not shown in solution*/
   }
 
-/*-----------nothing from here to 
-bottom of this tablet about page shown in solution*/
-
-
       /**************FAQ page for tablet*************/
- 
-
-  .faq .faq-content {
-     display: flex;
-     justify-content: center;
-     flex-flow: column wrap;
-     flex-basis: 50%; 
+    
+  .faq .content-wrapper {
+      justify-content: space-between;
   }
 
   .faq h2 {
@@ -787,12 +763,9 @@ bottom of this tablet about page shown in solution*/
 
 @media only screen and (min-width: 1200px) {
 
-  header {
-    padding: 15px 0;
-  }
-
   header figure {
   width: 25%;
+  height: 50px;
   }
 
   .content-wrapper {
@@ -816,10 +789,10 @@ bottom of this tablet about page shown in solution*/
 
   .hero-area h1 {
     font-size: 3.75em;
-    width: 60%;
+    width: 80%;
   }
 
-  /* -----------Aside forms area for dessktop--------- */
+  /* -----------Aside forms area for desktop--------- */
   
   aside .content-wrapper {
     justify-content: space-around;
@@ -827,13 +800,13 @@ bottom of this tablet about page shown in solution*/
   
   aside .content-wrapper .form-description, 
   aside .content-wrapper .form {
-    width: 30%;
-    margin: 0; /*not shown in solution*/
-  }
+    width: 40%;
+    }
 
   .form-description p {
-  font-size: 1.125em
+  font-size: 1.125em;
   line-height: 1.33; /*not shown in solution*/
+  width: 80%;
   }
 
   /* -----------features area for desktop--------- */
