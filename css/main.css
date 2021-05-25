@@ -271,9 +271,9 @@ footer .copyright {
   background: url("../img/hero-image.jpg") center no-repeat #333;
   background-size: cover;
   min-height: 500px;
-   display:flex;
-   justify-content: center;
-   flex-flow: row wrap;
+  display:flex;
+  justify-content: center;
+  flex-flow: row wrap;
 }
 
 .hero-area h1 {
@@ -603,6 +603,11 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   /* Hero area ---------*/
   h2 { 
     margin: 0;
+  }
+
+  .hero-area {
+    min-height: 600px;
+
   }
 
   footer .content-wrapper {
