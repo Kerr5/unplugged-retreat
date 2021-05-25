@@ -339,13 +339,16 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   flex-flow: row wrap;
 }
 
+.features .content-wrapper {
+  margin-top: 40px;
+}
 .features h2 {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   }
 
 .features article {
    width: 63%;
-   margin: 30px 0;
+   margin: 20px 0;
 }
 
 .features .features-items {
@@ -373,6 +376,10 @@ aside .form .download-itinerary {  /*not shown in solutions*/
    display:flex;
    justify-content: center;
    flex-flow: row wrap;
+}
+
+.reviews .content-wrapper {
+  margin-top: 50px;
 }
 
 .reviews h2 {
@@ -438,22 +445,18 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 }
 
 .faq .content-wrapper {  
-   margin: 50px 0 0 0; /* shown in solution*/
-   display:flex;
-   justify-content: center;
-   align-items: center;
-   flex-flow: row wrap;
+   margin: 50px 0 0 0;
 }
 
 .faq article {  
   display:flex;
   justify-content: center;
   align-items: center;
-  /* flex-flow: row wrap; */
+  flex-flow: row wrap; 
 }
 
 .faq h2 {
-  margin: 0; /*not shown in solution*/
+  font-size: 2.25em;
   margin-bottom: 25px; /* shown in solution*/
   line-height: 1; 
 }
@@ -461,10 +464,16 @@ aside .form .download-itinerary {  /*not shown in solutions*/
 .faq .faq-content {
   text-align: start;
   margin-bottom: 25px; 
+  width: 63%;
 }
 
-.faq .faq-content h4 {
-    line-height: 1.333; 
+/* .faq .faq-content h4 {
+  line-height: 1.333; 
+  margin-bottom: 15px;
+} */
+
+.faq p {
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -759,19 +768,22 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   }
 
       /**************FAQ page for tablet*************/
-    
-  .faq .content-wrapper {
-      justify-content: space-between;
+ 
+  .faq .faq-content {
+    display:flex;
+    justify-content: left;
+    /* align-items: center; */
+    flex-flow: row wrap;
+    flex-basis: 50%;
   }
 
   .faq h2 {
     width: 100%;
   }
 
-  .faq h4,
   .faq p {
     font-size: .875em;
-    width: 90%;
+    width: 90%;    
   }
 
 }
@@ -796,8 +808,7 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     font-size: 2.25em;
   }
 
-  h3,
-  h4 {
+  h3 {
     font-size: 1.875em;
   }
 
@@ -853,7 +864,7 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     font-size: 1.875em;
   }
 
-  /* ------------------About page-------------------*/
+  /* ------------------About page dektop-------------------*/
   .mission h2,
   .contact-section .content-wrapper h2 {
      width: 95%;
@@ -868,7 +879,10 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     font-size: 1.875em;
   }
 
-  /* ------------------FAQ page ------------------- */
+  /* ------------------FAQ page desktop------------------- */
+  .faq .content-wrapper {  
+    margin: 90px 0;
+ } 
 
   .faq h2 {
     width: 100%;
@@ -876,11 +890,11 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   }
   
   /*from solutions*/
-  .faq h4,
+  /* .faq h4,
   .faq p {
     font-size: 1.125em;
     line-height: 1;
-  }
+  } */
 
 }  /* closing for desktop styles*/
 
