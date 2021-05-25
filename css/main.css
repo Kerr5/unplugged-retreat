@@ -445,6 +445,13 @@ aside .form .download-itinerary {  /*not shown in solutions*/
    flex-flow: row wrap;
 }
 
+.faq article {  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-flow: row wrap; */
+}
+
 .faq h2 {
   margin: 0; /*not shown in solution*/
   margin-bottom: 25px; /* shown in solution*/
@@ -558,7 +565,7 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   /*--- Genereal Styles ----*/
   .content-wrapper {
     max-width: 640px;
-    margin: 90px 0; 
+    margin: 80px 0; 
   }
 
   h2 { 
@@ -672,13 +679,21 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     width: 85%;
   }
 
-  .reviews .review-item {
+  /* .reviews .review-item {
     width: 45%;
-  }
+  } */
 
   .reviews h3 {
     width: 75%;
     margin: 0;
+  }
+
+  .reviews img {
+    width: 90%;
+  }
+
+  .reviews .review-item {
+    width: 100%;
   }
 
   /******** footer*****/
@@ -831,9 +846,7 @@ aside .form .download-itinerary {  /*not shown in solutions*/
     padding-bottom: 50px;
   }
   
-  .reviews .review-item {
-    width: 42%;
-  }
+
 
 /* -----footer area ---- */
   footer h4 {
@@ -848,7 +861,7 @@ aside .form .download-itinerary {  /*not shown in solutions*/
   }
 
   .map-container {
-    padding-bottom: 37%; 
+    padding-bottom: 30%; 
   }
 
   contact-content h4 {
